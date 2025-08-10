@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clicker Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="mainContainer">
+        <div id="cookie-container">
+          <div class="ship-animation">
+            <div class="light-beam"></div>
+            <img
+              src="images/Flying Saucer in Metallic Detail.png"
+              id="spaceShip"
+              draggable="false"
+            />
+          </div>
+          <h2>cookies <span id="cookies-counter">0</span></h2>
+          <img
+            src="./images/ChatGPT Image Aug 7, 2025, 05_56_44 PM.png"
+            id="cookie"
+            draggable="false"
+          />
+          <h2>per second:</h2>
+          <label id="multiplier">0</label>
+        </div>
+        <div class="upgrades">
+          <div class="upgrade">
+            <div class="left-section">
+              <img
+                src="./images/pointer.png"
+                id="cursor"
+                class="upgrades-image"
+              />
+            </div>
+            <div class="mid-section">
+              <h4>Clicker</h4>
+              <div class="cost-info">
+                <p>Cost: <span id="clicker-cost">10</span></p>
+                <img src="./images/cookie-coin.png" alt="" class="coin-img" />
+              </div>
+            </div>
+            <div class="right-section">
+              Level <span class="clicker-lvl">0</span>
+            </div>
+            <div class="next-lvl-info">
+              <p>
+                +<span class="clicker-increase">0.1</span> cookies <br />
+                per second
+              </p>
+            </div>
+          </div>
+
+          <div class="upgrade">
+            <div class="left-section">
+              <img src="./images/alien.png" id="alien" class="upgrades-image" />
+            </div>
+            <div class="mid-section">
+              <h4>Alien</h4>
+              <div class="cost-info">
+                <p>Cost: <span id="alien-cost">250</span></p>
+                <img src="./images/cookie-coin.png" alt="" class="coin-img" />
+              </div>
+            </div>
+            <div class="right-section">
+              Level <span class="alien-lvl">0</span>
+            </div>
+            <div class="next-lvl-info">
+              <p>
+                +<span class="alien-increase">5</span> cookies <br />
+                per second
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
+
+<!-- 
+            <img src="./images/farm.png" id="farm" class="upgrades-image" />
+            <img
+              src="./images/factory.png"
+              id="factory"
+              class="upgrades-image"
+            />
+            <img src="./images/bank.png" id="bank" class="upgrades-image" />
+          </div> -->
