@@ -10,18 +10,29 @@ let clickerCost = parseFloat(clickerCostElem.textContent);
 let clickerLvl = document.querySelector(".clicker-lvl");
 let clickerIncrease = document.querySelector(".clicker-increase");
 let parsedClickerIncrease = parseFloat(clickerIncrease.innerHTML);
+let cookieMultiplier = document.getElementById("multiplier");
+let parsedCookieMultiplier = parseFloat(cookieMultiplier.textContent);
 let count = 0;
-let cps = 1;
+let cps = 0;
 
 cookie.onclick = () => {
   count++;
-  cookieCounter.textContent = Math.round(count);
+  cookieCounter.textContent = count.toFixed(1);
 
   cookie.style.transform = "scale(0.9)";
   setTimeout(() => {
     cookie.style.transform = "scale(1)";
   }, 100);
 };
+
+setInterval(() => {
+  console.log("Hello", cps);
+  if (cps > 0) {
+    cookieMultiplier.innerHTML = (parsedCookieMultiplier + cps).toFixed(1);
+    count += cps;
+    cookieCounter.textContent = count.toFixed(1);
+  }
+}, 1000);
 
 cursorUpgrade.onclick = () => {
   if (count >= clickerCost) {
@@ -30,7 +41,7 @@ cursorUpgrade.onclick = () => {
 
     clickerLvl.innerHTML++;
     parsedClickerIncrease = parseFloat(
-      (parsedClickerIncrease * 1.03).toFixed(2)
+      (parsedClickerIncrease = 0.1).toFixed(2)
     );
     clickerIncrease.innerHTML = parsedClickerIncrease;
     cps += parsedClickerIncrease;
